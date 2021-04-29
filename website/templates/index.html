@@ -1,27 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Instant &mdash; Free Restaurant Bootstrap 4 Template by uicookies.com</title>
+    <title>Amore Gastronomia</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'website/images/restaurant/favicon.png' %}"/>
+
     <meta name="description" content="free Bootstrap 4 Theme by uicookies.com">
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400, 600, 700" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{% static 'website/css/bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'website/fonts/ionicons/css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/magnific-popup.css' %}">
 
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'website/fonts/fontawesome/css/font-awesome.min.css' %}">
     
     
-    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="{% static 'website/css/slick.css' %}">
 
-    <link rel="stylesheet" href="assets/css/helpers.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/restaurant.css">
+    <link rel="stylesheet" href="{% static 'website/css/helpers.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'website/css/restaurant.css' %}">
   </head>
   <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
     
@@ -32,8 +35,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
       <div class="container">
         <a class="navbar-brand d-xl-none d-lg-none d-md-block d-sm-block" href="/">
-          <img src="assets/images/restaurant/logo.png" alt="Instant Logo" class="light">
-          <img src="assets/images/restaurant/logo-dark.png" alt="Instant Logo" class="dark">
+          <img src="{% static 'website/images/restaurant/logo.png' %}" alt="Instant Logo" class="light">
+          <img src="{% static 'website/images/restaurant/logo-dark.png' %}" alt="Instant Logo" class="dark">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
@@ -41,31 +44,30 @@
         <div class="collapse navbar-collapse justify-content-md-center" id="probootstrap-navbar">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-home">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-about">About</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-menu">Menu</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-about">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-menu">Cardápio</a></li>
             <li class="nav-item logo-center d-xl-block d-lg-block d-md-none d-sm-none d-none">
-              <a class="nav-link text-uppercase pb_letter-spacing-2" href="index.html">
-                <img src="assets/images/restaurant/logo.png" alt="Instant Logo" class="light">
-                <img src="assets/images/restaurant/logo-dark.png" alt="Instant Logo" class="dark">
+              <a class="nav-link text-uppercase pb_letter-spacing-2" href="{% url 'index' %}">
+                <img src="{% static 'website/images/restaurant/logo_amore_sm.png' %}" alt="Instant Logo" class="light">
+                <img src="{% static 'website/images/restaurant/logo_amore_sm.png' %}" alt="Instant Logo" class="dark">
               </a>
             </li>
-            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-events">Events</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-gallery">Fotos</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-events">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase pb_letter-spacing-2" href="#section-contact">Contato</a></li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- END nav -->
 
-    <section class="pb_cover_v1 cover-bg-black cover-bg-opacity-4 text-center" style="background-image: url(assets/images/restaurant/1900x1200/img_1.jpg)" id="section-home">
+    <section class="pb_cover_v1 cover-bg-black cover-bg-opacity-4 text-center" style="background-image: url({% static 'website/images/restaurant/1900x1200/temperos.jpg' %})" id="section-home">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-9  order-md-1">
-            <a href="https://vimeo.com/channels/staffpicks/93951774" class="play popup-vimeo"><i class="ion-ios-play"></i></a>
-            <h2 class="heading mb-3">The Lean Restaurant</h2>
-            <div class="sub-heading"><p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p></div>
-            <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3">Reserve a table</a></p>
+            <h2 class="heading mb-3">Amore Gastronomia</h2>
+            <div class="sub-heading"><p class="mb-5">Receitas italianas preparadas com amor e ingredientes de qualidade no sul do Brasil</p></div>
+            <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3">Faça um pedido</a></p>
           </div>  
         </div>
       </div>
@@ -78,16 +80,16 @@
           <div class="col-lg-8 mb-5">
             <div class="row">
               <div class="col">
-                <p><img src="assets/images/restaurant/800x975/img_1.jpg" alt="Instant Image" class="img-fluid"></p>
+                <p><img src="{% static 'website/images/restaurant/800x975/eliza.jpg' %}" alt="Instant Image" class="img-fluid"></p>
               </div>
               <div class="col">
-                <p><img src="assets/images/restaurant/800x975/img_2.jpg" alt="Instant Image" class="img-fluid"></p>
+                <p><img src="{% static 'website/images/restaurant/800x975/hmm_paozinho_com_pesto.jpg' %}" alt="Instant Image" class="img-fluid"></p>
               </div>
             </div>
           </div>
           <div class="col-lg-4 pl-lg-5 pl-lg-0">
-            <h2 class="mb-4 text-uppercase pb_letter-spacing-2">The Restaurant</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <h2 class="mb-4 text-uppercase pb_letter-spacing-2">Conheça a Amore e a Eliza</h2>
+            <p>A Eliza muito querida faz comidinhas que são uma delícia, se eu pudesse só comeria Amore, pãozinho australiano no café da manhã, pizza no almoço e na janta chocolate roll</p>
 
             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
             <p><a href="#section-menu" class="smoothscroll text-danger text-uppercase">See our menu <i class="ion-arrow-down-c"></i></a></p>
@@ -109,56 +111,65 @@
 
             <ul class="nav justify-content-center pb_tab_v1">
               <li class="nav-item">
-                <a class="nav-link active p-3" data-toggle="list" href="#food" role="tab">Food</a>
+                <a class="nav-link active p-3" data-toggle="list" href="#focacce" role="tab">Focacce</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#drinks" role="tab">Drinks</a>
+                <a class="nav-link p-3" data-toggle="list" href="#pane" role="tab">Pane</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#salads" role="tab">Salads</a>
+                <a class="nav-link p-3" data-toggle="list" href="#altri" role="tab">Altri</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link p-3" data-toggle="list" href="#grissini" role="tab">Grissini</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" data-toggle="list" href="#kits" role="tab">Kits</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-3" data-toggle="list" href="#dolci" role="tab">Dolci</a>
               </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="food" role="tabpanel">
+              <div class="tab-pane fade show active" id="focacce" role="tabpanel">
                 <div class="row">
                   <div class="col-md">
                     <ul class="list-unstyled pb_food-menu">
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Eggplant Parmiagana</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                            <h3 class="pb_font-18 font-weight-bold">Originale</h3>
+                            <p class="mb-0">Alecrim, salmarinho, azeite extra virgem</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>13.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Fried Calamari</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                            <h3 class="pb_font-18 font-weight-bold">Bianca</h3>
+                            <p class="mb-0">Azeite extra virgem</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>15.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Sausage and Pepper</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                            <h3 class="pb_font-18 font-weight-bold">Pomodorini</h3>
+                            <p class="mb-0">Tomate cereja, sal marinho, azeite extra virgem</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>17.35</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>20</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Potato and Egg</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                            <h3 class="pb_font-18 font-weight-bold">Veg</h3>
+                            <p class="mb-0">Tomate cereja, abobrinha, sal marinho, azeite extra virgem</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>11.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>20</span></div>
                         </div>
                       </li>
                     </ul>
@@ -168,81 +179,82 @@
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Eggplant Parmiagana</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Olive</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>20.75</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>20.75</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Fried Calamari</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Melanzane</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>18.00</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>18.00</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Sausage and Pepper</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Melanzane com parmesão</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>10.25</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.25</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Potato and Egg</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Funghi</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>21.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>21.95</span></div>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="drinks" role="tabpanel">
+
+              <div class="tab-pane fade" id="pane" role="tabpanel">
                 <div class="row">
                   <div class="col-md">
                     <ul class="list-unstyled pb_food-menu">
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Fountain Soda</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>10.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Fresh Juices</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>12.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Coffee/Tea</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>5.35</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Unsweetened Tea</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>12.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
                         </div>
                       </li>
                     </ul>
@@ -252,54 +264,55 @@
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Fountain Soda</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>10.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Fresh Juices</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>12.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Coffee/Tea</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>5.35</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
                         </div>
                       </li>
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Unsweetened Tea</h3>
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
                             <p class="mb-0">Far far away, behind the word mountains..</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>12.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
                         </div>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="salads" role="tabpanel">
+
+              <div class="tab-pane fade" id="altri" role="tabpanel">
                 <div class="row">
                   <div class="col-md">
                     <ul class="list-unstyled pb_food-menu">
                       <li>
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Caesars Salad</h3>
-                            <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
+                            <h3 class="pb_font-18 font-weight-bold">Originale</h3>
+                            <p class="mb-0">Alecrim,salmarinho,azeiteextravirgem</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>13.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>13.95</span></div>
                         </div>
                       </li>
                       <li>
@@ -308,7 +321,7 @@
                             <h3 class="pb_font-18 font-weight-bold">Garden Salad</h3>
                             <p class="mb-0">Mixed greens, tomato, cucumber &amp; black olives</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>15.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15.50</span></div>
                         </div>
                       </li>
                       <li>
@@ -317,7 +330,7 @@
                             <h3 class="pb_font-18 font-weight-bold">Baby Greens</h3>
                             <p class="mb-0">Mixed greens, fresh mozzarella, tomato &ampl toasted peppers</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>17.35</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>17.35</span></div>
                         </div>
                       </li>
                       <li>
@@ -326,7 +339,7 @@
                             <h3 class="pb_font-18 font-weight-bold">Cold Antipasto</h3>
                             <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>11.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>11.50</span></div>
                         </div>
                       </li>
                     </ul>
@@ -339,7 +352,7 @@
                             <h3 class="pb_font-18 font-weight-bold">Caesars Salad</h3>
                             <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>22.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>22.95</span></div>
                         </div>
                       </li>
                       <li>
@@ -348,7 +361,7 @@
                             <h3 class="pb_font-18 font-weight-bold">Garden Salad</h3>
                             <p class="mb-0">Mixed greens, tomato, cucumber &amp; black olives</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>11.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>11.50</span></div>
                         </div>
                       </li>
                       <li>
@@ -357,7 +370,7 @@
                             <h3 class="pb_font-18 font-weight-bold">Baby Greens</h3>
                             <p class="mb-0">Mixed greens, fresh mozzarella, tomato &ampl toasted peppers</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>14.35</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>14.35</span></div>
                         </div>
                       </li>
                       <li>
@@ -366,7 +379,260 @@
                             <h3 class="pb_font-18 font-weight-bold">Cold Antipasto</h3>
                             <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>$</sup>15.50</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15.50</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="grissini" role="tabpanel">
+                <div class="row">
+                  <div class="col-md">
+                    <ul class="list-unstyled pb_food-menu">
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md">
+                    <ul class="list-unstyled pb_food-menu">
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="kits" role="tabpanel">
+                <div class="row">
+                  <div class="col-md">
+                    <ul class="list-unstyled pb_food-menu">
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md">
+                    <ul class="list-unstyled pb_food-menu">
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="dolci" role="tabpanel">
+                <div class="row">
+                  <div class="col-md">
+                    <ul class="list-unstyled pb_food-menu">
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md">
+                    <ul class="list-unstyled pb_food-menu">
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="row">
+                          <div class="col-lg-10">
+                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
+                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                          </div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
                         </div>
                       </li>
                     </ul>
@@ -380,7 +646,7 @@
     </section>
     <!-- END section -->
 
-    <section class="pb_md_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url(assets/images/restaurant/1900x1200/img_1.jpg)" id="section-home">
+    <section class="pb_md_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url({% static 'website/images/restaurant/1900x1200/img_1.jpg' %})" id="section-home">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-9  order-md-1">
@@ -403,57 +669,57 @@
           <div class="col">
             <div class="card-columns">
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/800x975/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/800x975/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/800x975/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/800x975/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/1900x1200/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/1900x1200/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/1900x1200/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/1900x1200/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/800x975/img_2.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/800x975/img_2.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/800x975/img_2.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/800x975/img_2.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/1900x1200/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/1900x1200/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/1900x1200/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/1900x1200/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/800x975/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/800x975/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/800x975/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/800x975/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/800x975/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/800x975/img_2.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/800x975/img_2.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/800x975/img_2.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/800x975/img_2.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
               <div class="card border-0 mb-4">
-                <a href="assets/images/restaurant/1900x1200/img_1.jpg" class="pb_hover-zoom image-popup">
-                  <img class="img-fluid" src="assets/images/restaurant/1900x1200/img_1.jpg" alt="Image caption here">
+                <a href="{% static 'website/images/restaurant/1900x1200/img_1.jpg' %}" class="pb_hover-zoom image-popup">
+                  <img class="img-fluid" src="{% static 'website/images/restaurant/1900x1200/img_1.jpg' %}" alt="Image caption here">
                   <i class="ion-ios-search-strong icon"></i>
                 </a>
               </div>
@@ -476,7 +742,7 @@
               <div class="media-body">
                 <div class="quote pb_text-black">&ldquo;</div>
                 <blockquote class="mb-5 pb_font-20">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</blockquote>
-                <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/persons/person_1.jpg" alt="Generic placeholder image">
+                <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="{% static 'website/images/persons/person_1.jpg' %}" alt="Generic placeholder image">
                 <h3 class="heading">Garry Alexander</h3>
                 <p class="subheading">@garry</p>
               </div>
@@ -487,7 +753,7 @@
               <div class="media-body">
                 <div class="quote pb_text-black">&ldquo;</div>
                 <blockquote class="mb-5 pb_font-20">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</blockquote>
-                <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/persons/person_5.jpg" alt="Generic placeholder image">
+                <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="{% static 'website/images/persons/person_5.jpg' %}" alt="Generic placeholder image">
                 <h3 class="heading">Deborah Smith</h3>
                 <p class="subheading">@deborah</p>
                 
@@ -500,7 +766,7 @@
               <div class="media-body">
                 <div class="quote pb_text-black">&ldquo;</div>
                 <blockquote class="mb-5 pb_font-20">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</blockquote>
-                <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="assets/images/persons/person_2.jpg" alt="Generic placeholder image">
+                <img class="d-flex text-center mx-auto mb-3 rounded-circle" src="{% static 'website/images/persons/person_2.jpg' %}" alt="Generic placeholder image">
                 <h3 class="heading">James Robertson</h3>
                 <p class="subheading">@james</p>
                 
@@ -511,7 +777,7 @@
       </div>
     </section>
     <!-- END section -->
-    <section class="pb_md_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url(assets/images/restaurant/1900x1200/img_1.jpg)" id="section-home">
+    <section class="pb_md_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url({% static 'website/mages/restaurant/1900x1200/img_1.jpg' %})" id="section-home">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-9  order-md-1">
@@ -532,7 +798,7 @@
         <div class="row">
           <div class="card-deck">
             <div class="card border-0">
-              <img class="card-img-top" src="assets/images/restaurant/1900x1200/img_1.jpg" alt="Image caption here">
+              <img class="card-img-top" src="{% static 'website/mages/restaurant/1900x1200/img_1.jpg' %}" alt="Image caption here">
               <div class="card-body pb_p-40">
                 <small class="text-uppercase pb_color-dark-opacity-3 font-weight-bold">December 2nd, 2017</small>
                 <h4 class="card-title"><a href="#" class="text-danger">Thanksgiving and Reflections</a></h4>
@@ -540,7 +806,7 @@
               </div>
             </div>
             <div class="card border-0">
-              <img class="card-img-top" src="assets/images/restaurant/1900x1200/img_1.jpg" alt="Image caption here">
+              <img class="card-img-top" src="{% static 'website/mages/restaurant/1900x1200/img_1.jpg' %}" alt="Image caption here">
               <div class="card-body pb_p-40">
                 <small class="text-uppercase pb_color-dark-opacity-3 font-weight-bold">December 10th, 2017</small>
                 <h4 class="card-title"><a href="#" class="text-danger">Maker of Monday</a></h4>
@@ -548,7 +814,7 @@
               </div>
             </div>
             <div class="card border-0">
-              <img class="card-img-top" src="assets/images/restaurant/1900x1200/img_1.jpg" alt="Image caption here">
+              <img class="card-img-top" src="{% static 'website/mages/restaurant/1900x1200/img_1.jpg' %}" alt="Image caption here">
               <div class="card-body pb_p-40">
                 <small class="text-uppercase pb_color-dark-opacity-3 font-weight-bold">December 23rd, 2017</small>
                 <h4 class="card-title"><a href="#" class="text-danger">Family and Kids Promo</a></h4>
@@ -629,25 +895,25 @@
     <!-- loader -->
     <div id="pb_loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#FDA04F"/></svg></div>
     
-
-    <script src="assets/js/jquery.min.js"></script>
+{% static 'website/js/main.js' %}
+    <script src="{% static 'website/js/jquery.min.js' %}"></script>
     
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="{% static 'website/js/popper.min.js' %}"></script>
+    <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'website/js/slick.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.mb.YTPlayer.min.js' %}"></script>
 
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <script src="{% static 'website/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'website/js/jquery.easing.1.3.js' %}"></script>
     
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/magnific-popup-options.js"></script>
+    <script src="{% static 'website/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'website/js/magnific-popup-options.js' %}"></script>
   
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="assets/js/google-map.js"></script>
+    <script src="{% static 'website/js/google-map.js' %}"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'website/js/main.js' %}"></script>
     
   </body>
 </html>

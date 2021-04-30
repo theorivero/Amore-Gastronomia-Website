@@ -5,6 +5,11 @@
     div.contact {
       margin-top: 20px;
     }
+    .notshow {
+      display:none;  
+
+
+    }
   </style>
   <head>
     <meta charset="utf-8">
@@ -115,535 +120,55 @@
           <div class="col">
 
             <ul class="nav justify-content-center pb_tab_v1">
+              {% for group in itemGroups %}
               <li class="nav-item">
-                <a class="nav-link active p-3" data-toggle="list" href="#focacce" role="tab">Focacce</a>
+                <a class="nav-link p-3" data-toggle="list" href="#{{group.name}}" role="tab">{{group.name}}</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#pane" role="tab">Pane</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#altri" role="tab">Altri</a>
-              </li>
-               <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#grissini" role="tab">Grissini</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#kits" role="tab">Kits</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-3" data-toggle="list" href="#dolci" role="tab">Dolci</a>
-              </li>
+              {% endfor %}
             </ul>
-
             <!-- Tab panes -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="focacce" role="tabpanel">
+            <div class="tab-content">      
+              {% for group in itemGroups %}             
+              {% if group.name == 'focacce'%}
+              <div class="tab-pane fade show active" id="{{group.name}}" role="tabpanel">
+              {% else%}
+              <div class="tab-pane fade" id="{{group.name}}" role="tabpanel">
+              {% endif %}
                 <div class="row">
                   <div class="col-md">
                     <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Originale</h3>
-                            <p class="mb-0">Alecrim, salmarinho, azeite extra virgem</p>
+                    {% for item in group.item_set.all %}
+                        <li class="{% cycle 'show' 'notshow' %}">
+                          <div class="row">
+                            <div class="col-lg-10">
+                              <h3 class="pb_font-18 font-weight-bold">{{item.name}}</h3>
+                              <p class="mb-0">{{item.description}}</p>
+                            </div>
+                            <div class="col-lg-2"><span class="price"><sup>R$</sup>{{item.price}}</span></div>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Bianca</h3>
-                            <p class="mb-0">Azeite extra virgem</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pomodorini</h3>
-                            <p class="mb-0">Tomate cereja, sal marinho, azeite extra virgem</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>20</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Veg</h3>
-                            <p class="mb-0">Tomate cereja, abobrinha, sal marinho, azeite extra virgem</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>20</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Olive</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>20.75</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Melanzane</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>18.00</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Melanzane com parmesão</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.25</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Funghi</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>21.95</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                        </li>
+                      {% endfor %}
 
-              <div class="tab-pane fade" id="pane" role="tabpanel">
-                <div class="row">
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
                     </ul>
                   </div>
                   <div class="col-md">
                     <ul class="list-unstyled pb_food-menu">
-                      <li>
+                      {% for item in group.item_set.all %}
+                       <li class="{% cycle 'notshow' 'show' %}">
                         <div class="row">
                           <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
+                            <h3 class="pb_font-18 font-weight-bold">{{item.name}}</h3>
+                            <p class="mb-0">{{item.description}}</p>
                           </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
+                          <div class="col-lg-2"><span class="price"><sup>R$</sup>{{item.price}}</span></div>
                         </div>
                       </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
+                      {% endfor %}
                     </ul>
                   </div>
                 </div>
               </div>
-
-              <div class="tab-pane fade" id="altri" role="tabpanel">
-                <div class="row">
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Originale</h3>
-                            <p class="mb-0">Alecrim,salmarinho,azeiteextravirgem</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>13.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Garden Salad</h3>
-                            <p class="mb-0">Mixed greens, tomato, cucumber &amp; black olives</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Baby Greens</h3>
-                            <p class="mb-0">Mixed greens, fresh mozzarella, tomato &ampl toasted peppers</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>17.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Cold Antipasto</h3>
-                            <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>11.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Caesars Salad</h3>
-                            <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>22.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Garden Salad</h3>
-                            <p class="mb-0">Mixed greens, tomato, cucumber &amp; black olives</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>11.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Baby Greens</h3>
-                            <p class="mb-0">Mixed greens, fresh mozzarella, tomato &ampl toasted peppers</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>14.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Cold Antipasto</h3>
-                            <p class="mb-0">Romaine lettuce, croutons, and grated cheese</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>15.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="grissini" role="tabpanel">
-                <div class="row">
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="kits" role="tabpanel">
-                <div class="row">
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="dolci" role="tabpanel">
-                <div class="row">
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão branco, integral ou semi-integral</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão da Crônica</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão multigrãos</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md">
-                    <ul class="list-unstyled pb_food-menu">
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Sovadinho</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>10.95</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão Autraliano</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>5.35</span></div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="row">
-                          <div class="col-lg-10">
-                            <h3 class="pb_font-18 font-weight-bold">Pão de forma enriquecido</h3>
-                            <p class="mb-0">Far far away, behind the word mountains..</p>
-                          </div>
-                          <div class="col-lg-2"><span class="price"><sup>R$</sup>12.50</span></div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              {% endfor %}              
             </div>
           </div>
         </div>

@@ -1,6 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    div.contact {
+      margin-top: 20px;
+    }
+  </style>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -67,7 +72,7 @@
           <div class="col-md-9  order-md-1">
             <h2 class="heading mb-3">Amore Gastronomia</h2>
             <div class="sub-heading"><p class="mb-5">Receitas italianas preparadas com amor e ingredientes de qualidade no sul do Brasil</p></div>
-            <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3">Faça um pedido</a></p>
+            <p><a href="https://wa.me/5504899835353?text=Quero%20fazer%20um%20pedido%20" role="button" class="btn smoothscroll pb_outline-light rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3">Faça um pedido</a></p>
           </div>  
         </div>
       </div>
@@ -777,50 +782,81 @@
       </div>
     </section>
     <!-- END section -->
-    <section class="pb_section pt-0 pb-0" id="section-contact">
-      <div class="d-flex">
-        <div class="pb_half py-5">
-          <div class="row justify-content-center mb-5">
-            <div class="col-md-10 text-center">
-              <h2 class="mb-4 text-uppercase pb_letter-spacing-2">Write us</h2>
+    <section class="mt-50 mb-100">
+      
+      <div class="container">
+        <hr>
+        <div class="row">
+          <div class="col-12">
+            <center>
+              <div class="google-maps mb-200">
+                 <iframe src="https://maps.google.com/maps?q=Rua%20s%C3%A3o%20judas%20tadeu%20164&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen width="800" height="400"></iframe>
+              </div>
+            </center>
+          </div>
+        </div>
+        <hr>
+
+        <div class="row">
+          <!-- Contact Information -->
+          <div class="col-12 col-md-4">
+            <div class="contact-information">
+              <br>
+              <br>
+              <br>
+              <h5>Endereço</h5>
+              <p>R. São Judas Tadeu, 164 - José Mendes, Florianópolis - SC</p>
+              <br>
+              <h5>Telefone</h5>
+              <p>48 99983-5353</p>
+              <br>
+              <h5>Email</h5>
+              <p class="mb-0">Eliza.dento@gmail.com</p>
             </div>
           </div>
-          <div class="row justify-content-md-center">
-            <div class="col-md-7">
+
+          <!-- Contact Form -->
+          <div class="col-12 col-md-8">
+            <div class="contact-form">
+              <!-- Section Heading -->
+              <div class="section-heading">
+                <h2>Entre em contato </h2>
+                <div class="line"></div>
+              </div>
+              <!-- Form -->
               <form action="#">
                 <div class="row">
                   <div class="col-md">
                     <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control p-3 rounded-0" id="name">
+                      <label for="name">Nome</label>
+                      <input type="text" class="form-control p-3 rounded-0" id="name" >
                     </div>
                   </div>
                   <div class="col-md">
                     <div class="form-group">
-                      <label for="email">Email</label>
+                      <label for="email">Telefone</label>
                       <input type="text" class="form-control p-3 rounded-0" id="email">
                     </div>
                   </div>
                 </div>
                 
                 <div class="form-group">
-                  <label for="message">Message</label>
+                  <label for="message">Mensagem</label>
                   <textarea cols="30" rows="10" class="form-control  p-3 rounded-0" id="message"></textarea>
                 </div>
                 <div class="form-group">
                   <input type="submit" class="btn pb_outline-dark pb_font-13 pb_letter-spacing-2  p-3 rounded-0" value="Send Message">
                 </div>
               </form>
+
             </div>
           </div>
         </div>
-        
-        <iframe src="https://maps.google.com/maps?q=rua%20desembargador%20arno%20hoeschl%20174&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            allowfullscreen class="pb_half"></iframe>
-       
       </div>
-      
     </section>
+  <!-- ***** Contact Area End ***** -->
+
     <!-- END section -->
 
     <footer class="pb_footer bg-light" role="contentinfo">
